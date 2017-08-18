@@ -1,7 +1,10 @@
 package character;
 
 
-import monster.Monster;
+import ekwipunek.Item;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Character {
     private String nick;
@@ -14,6 +17,11 @@ public class Character {
     private int lvl;
     private int getExperienceToNextlvl = 200;
 
+    private List<Item> eqList = new ArrayList<>();//lista ekwipunku
+
+
+
+
     public Character(String nick, double hp, int mana, int defensive, double attack, int experience, int lvl, int getExperienceToNextlvl) {
         this.nick = nick;
         this.hp = hp;
@@ -23,7 +31,23 @@ public class Character {
         this.experience = experience;
         this.lvl = lvl;
         this.getExperienceToNextlvl = getExperienceToNextlvl;
+
+
     }
+
+    public int sumEq(Item item){// zsumować ciezar itemow z eq
+        return item.getItemWeight();
+    }
+
+    public boolean addToEq(Item item){
+        if(item.getTempWeight() + item.getFullWeight() > item.getFullWeight());
+        return false;
+
+
+
+
+    }
+
 
     public String getNick() {
         return nick;
@@ -72,6 +96,11 @@ public class Character {
     public void addExperience(int experience) {
         this.experience += experience;
 
+    }
+    public void showList(){ // petla po liscie
+        for (Item i : eqList) {
+            System.out.println(i);
+        }
     }
 
     public int getLvl() {

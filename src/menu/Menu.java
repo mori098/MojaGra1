@@ -8,11 +8,27 @@ import character.Fighter;
 
 import java.util.Scanner;
 
+import character.Elf;
+import character.Fighter;
+import character.Magican;
+import player.Player;
+import character.Fighter;
+
+import java.util.Scanner;
+
+import character.Elf;
+import character.Fighter;
+import character.Magican;
+import player.Player;
+import character.Fighter;
+
+import java.util.Scanner;
+
 public class Menu {
     private Player player;
 
 
-    Scanner scanner;
+    public static Scanner scanner = new Scanner(System.in);
 
     public Menu() {
         System.out.println("Witaj w grze!");
@@ -74,6 +90,6 @@ public class Menu {
 
 
     public static void main(String[] args) {
-
+        Menu menu = new Menu();
     }
 }
